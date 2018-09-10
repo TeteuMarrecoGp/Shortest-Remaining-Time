@@ -77,3 +77,17 @@ public class SRTF {
      }
      
      System.out.println();
+ 
+     float WT = 0,TT = 0;
+     for(int i = 1; i <= n; i++)
+     {
+      WT += proc[i][2];
+      TT += proc[i][3];
+     }
+     WT /= n;
+     TT /= n;
+     System.out.println("A media WT é: " + WT + "ms");
+     System.out.println("A media TT é: " + TT + "ms");
+ }
+    
+}
