@@ -39,3 +39,32 @@ public class SRTF {
       System.out.println("Por favor, informe o tempo de burst para o processo " + i + ": ");
       proc[i][1] = Integer.parseInt(br.readLine());
      }
+  for(int j = 1; j <= n; j++)
+      {
+       if(proc[j][0] <= i)
+       {
+        if(proc[j][1] != 0)
+        {
+         proc[j][3]++;
+            if(j != sel_proc)
+             proc[j][2]++;
+        }
+        else if(j == sel_proc)
+         proc[j][3]++;
+       }
+      }
+                 if(i != 0)
+      {
+       if(sel_proc != time_chart[i - 1])
+               {
+        System.out.print("--" + i + "--P" + sel_proc);
+       }
+      }
+      else
+       System.out.print(i + "--P" + sel_proc);
+      if(i == total_time - 1)
+       System.out.print("--" + (i + 1));
+      
+     }
+     System.out.println();
+     System.out.println();
