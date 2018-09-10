@@ -1,4 +1,27 @@
-package escalonamento;
+ System.out.println();
+     
+       int total_time = 0;
+     for(int i = 1; i <= n; i++)
+     {
+      total_time += proc[i][1];
+     }
+     int time_chart[] = new int[total_time];
+     
+     for(int i = 0; i < total_time; i++)
+     {
+            int sel_proc = 0;
+      int min = 99999;
+      for(int j = 1; j <= n; j++)
+      {
+       if(proc[j][0] <= i)
+       {
+        if(proc[j][1] < min && proc[j][1] != 0)
+        {
+         min = proc[j][1];
+         sel_proc = j;
+        }
+       }
+      }package escalonamento;
 
 import java.io.*;
 public class SRTF {
