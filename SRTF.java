@@ -69,3 +69,11 @@ public class SRTF {
      }
      System.out.println();
      System.out.println();
+   System.out.println("P\t WT \t TT ");
+     for(int i = 1; i <= n; i++)
+     {
+      System.out.printf("%d\t%2dms\t%2dms",i,proc[i][2],proc[i][3]);
+      System.out.println();
+     }
+     
+     System.out.println();
